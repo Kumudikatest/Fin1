@@ -2,7 +2,8 @@
   "name": "Fin1",
   "version": "1.0.0",
   "dependencies": {
-    "swagger-client": "3.8.21"
+    "swagger-client": "3.8.21",
+    "mysql": "2.17.1"
   },
   "devDependencies": {}
 }

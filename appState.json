@@ -25,7 +25,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "Fin1/lambda.js",
-        "code": "let Swagger = require('swagger-client');\n\nexports.handler = function (event, context, callback) {\n    \n    Swagger.http({\n        url: `http://bx8ocdir2g.execute-api.eu-west-1.amazonaws.com/prod/fyn`,\n        method: 'get',\n        query: {},\n        headers: { \"Accept\": \"\" }\n    }).then((response) => {\n        // your code goes here\n        console.log(response);\n    }).catch((err) => {\n        // error handling goes here\n    });\n\n    Swagger.http({\n        url: `http://bx8ocdir2g.execute-api.eu-west-1.amazonaws.com/prod/fyn`,\n        method: 'post',\n        query: {},\n        headers: { \"Accept\": \"\", \"Content-Type\": \"applications/json\" },\n        body: { \"Test\": \"Value\" }\n    }).then((response) => {\n        console.log(response);\n        // your code goes here\n    }).catch((err) => {\n        // error handling goes here\n    });\n\n\n    callback(null, { \"message\": \"Successfully executed\" });\n}",
+        "code": "let Swagger = require('swagger-client');\n\nexports.handler = function (event, context, callback) {\n\n    Swagger.http({\n        url: `http://bx8ocdir2g.execute-api.eu-west-1.amazonaws.com/prod/fyn`,\n        method: 'get',\n        query: {},\n        headers: { \"Accept\": \"\" }\n    }).then((response) => {\n        // your code goes here\n        console.log(response);\n    }).catch((err) => {\n        // error handling goes here\n    });\n\n    Swagger.http({\n        url: `http://bx8ocdir2g.execute-api.eu-west-1.amazonaws.com/prod/fyn`,\n        method: 'post',\n        query: {},\n        headers: { \"Accept\": \"\", \"Content-Type\": \"applications/json\" },\n        body: { \"Test\": \"Value\" }\n    }).then((response) => {\n        console.log(response);\n        // your code goes here\n    }).catch((err) => {\n        // error handling goes here\n    });\n    Swagger.http({\n        url: `http://bx8ocdir2g.execute-api.eu-west-1.amazonaws.com/prod/fyn`,\n        method: 'post',\n        query: {},\n        headers: { \"Accept\": \"\", \"Content-Type\": \"applications/json\" },\n        body: b\n    }).then((response) => {\n        // your code goes here\n    }).catch((err) => {\n        // error handling goes here\n    });\n\n\n    callback(null, { \"message\": \"Successfully executed\" });\n}",
         "config": {
           "runtime": "nodejs8.10",
           "handler": "handler",
@@ -149,6 +149,11 @@
           "version": "3.8.21",
           "dev": false,
           "notRemovable": false
+        },
+        "mysql": {
+          "name": "mysql",
+          "version": "2.17.1",
+          "language": "javascript"
         }
       }
     }
@@ -160,7 +165,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1564125326841
+    "lastSave": 1564126072765
   },
   "VCS_STATE": {
     "provider": "GitHub",
